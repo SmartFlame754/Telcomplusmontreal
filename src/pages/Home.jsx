@@ -97,14 +97,24 @@ const Home = () => {
       chartRef.current.destroy();
     }
 
+    const chartData = services.map(service => {
+      if (service.name === "Network Cabling") {
+        return Math.floor(Math.random() * 100) + 50; // More popularity for Network Cabling
+      } else if (service.name === "Wireless Installation") {
+        return Math.floor(Math.random() * 50); // Less popularity for Wireless Installation
+      } else {
+        return Math.floor(Math.random() * 100);
+      }
+    });
+
     chartRef.current = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: services.map(service => service.name),
         datasets: [{
           label: 'Service Popularity',
-          data: services.map(() => Math.floor(Math.random() * 100)),
-          backgroundColor: '#007bff',
+          data: chartData,
+          backgroundColor: '#ff0000', // Red color for the chart
           borderWidth: 1
         }]
       },
@@ -151,17 +161,17 @@ const Home = () => {
               </button>
             </div>
           </div>
-          {ipData.ip && (
-            <div className="hero-location">
-              <h2>Your Location</h2>
+          <div className="hero-location">
+            <h2>Your Location</h2>
+            {ipData.ip && (
               <div className="ip-info">
                 <p>IP: {ipData.ip}</p>
                 <p>City: {ipData.city}</p>
                 <p>Country: {ipData.countryName}</p>
                 <p>ISP: {ipData.isp}</p>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </section>
 

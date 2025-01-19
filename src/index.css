@@ -28,12 +28,12 @@ body {
 
 .btn-secondary:hover {
   background-color: #eee;
-  color: #007bff;
+  color: #ff0000;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #007bff, #0056b3);
+  background: linear-gradient(135deg, #ff0000, #8b0000);
   color: white;
   padding: 100px 20px;
   text-align: center;
@@ -53,6 +53,39 @@ body {
   display: flex;
   gap: 1rem;
   justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-location {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.hero-location h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-location .ip-info {
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 /* Quote Section */
@@ -132,7 +165,7 @@ body {
 
 .service-icon-container {
   font-size: 2.5rem;
-  color: #007bff;
+  color: #ff0000;
   margin-bottom: 1rem;
 }
 
@@ -150,7 +183,7 @@ body {
 
 /* Buttons */
 .btn-primary {
-  background: #007bff;
+  background: #ff0000;
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -160,7 +193,7 @@ body {
 }
 
 .btn-primary:hover {
-  background: #0056b3;
+  background: #8b0000;
 }
 
 .btn-secondary {
@@ -175,7 +208,7 @@ body {
 
 .btn-secondary:hover {
   background: #eee;
-  color: #007bff;
+  color: #ff0000;
 }
 
 /* Chart Container */
@@ -185,7 +218,7 @@ body {
 
 /* Social Bar */
 .social-bar {
-  background: #007bff;
+  background: #ff0000;
   padding: 8px 20px;
   display: flex;
   justify-content: space-between;
@@ -220,14 +253,14 @@ body.scrolled .social-bar {
 
 .social-icons {
   display: flex;
-  gap: 6px; /* Reduced gap */
+  gap: 8px;
   margin-left: auto;
   align-items: center;
 }
 
 .social-icons img {
-  width: 18px; /* Reduced width */
-  height: 18px; /* Reduced height */
+  width: 20px;
+  height: 20px;
   filter: brightness(0) invert(1);
   transition: transform 0.3s;
 }
@@ -298,7 +331,7 @@ body.scrolled .main-menu {
 }
 
 .call-button:hover {
-  background-color: #007bff;
+  background-color: #ff0000;
   color: white;
 }
 
@@ -434,4 +467,88 @@ a {
 
 a:hover {
   color: #ff0000;
+}
+
+/* Company Title */
+.company-title {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Footer */
+.main-footer {
+  background: #343a40;
+  color: #eee;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-links {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+
+.footer-social {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-social h4 {
+  margin-bottom: 10px;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-social .social-icons img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-copyright {
+  background: #222;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.8rem;
 }
